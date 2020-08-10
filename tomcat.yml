@@ -11,7 +11,7 @@
     unarchive: src=/home/ubuntu/apache-tomcat-8.0.27.tar.gz dest=/home/ubuntu remote_src=yes
 
   - name: copy techdata.war
-    get_url: url=https://devops-work.s3-us-west-2.amazonaws.com/TechdatCommunicationss.war dest=/home/ubuntu/
+    get_url: url= dest=/home/ubuntu/https://viveksruthi123.s3-us-west-2.amazonaws.com/TechdatCommunicationss.war dest=/home/ubuntu
   
   - name: copying the war file to server
     shell: cp /home/ubuntu/TechdatCommunicationss.war /home/ubuntu/apache-tomcat-8.0.27/webapps/
