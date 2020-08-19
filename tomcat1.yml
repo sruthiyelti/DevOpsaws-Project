@@ -1,5 +1,5 @@
 ---
-- hosts: dev
+- hosts: 34.211.56.213
   remote_user: root
 
   tasks:
