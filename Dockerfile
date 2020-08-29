@@ -1,2 +1,2 @@
-FROM mysql/mysql-server:latest
+FROM mongo:latest
 
