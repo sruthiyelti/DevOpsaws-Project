@@ -1,3 +1,2 @@
-from mongo:latest
-from mysql:latest
+from : mongodb
 
