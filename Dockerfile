@@ -2,7 +2,7 @@
 FROM sruthicloud/tomcat8
 MAINTAINER yeltisruthireddy@gmail.com
 RUN apt-get update
-RUN  sh "cp s3://viveksruthi123/DevOpsRocks.war /usr/local/tomcat/webapps"
+RUN cp s3://viveksruthi123/DevOpsRocks.war /usr/local/tomcat/webapps --recursive
 WORKDIR /usr/local/tomcat/webapps/
 EXPOSE 8080
 CMD ["catalina.sh", "run"]
