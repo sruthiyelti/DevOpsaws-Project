@@ -22,7 +22,7 @@
   <repository>
      <id>releases</id>
      <name>Releases</name>
-    <url>http://34.221.124.60:8080/nexus-latest/content/repositories/releases//</url>
+    <url>http://34.221.124.60:8081/repository/simpleapp-release/</url>
   </repository>
   <snapshotRepository>
      <id>snapshots</id>
