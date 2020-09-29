@@ -1,0 +1,35 @@
+#!groovy
+
+pipeline
+{
+    agent any
+    stages
+    {
+        stage ('Download')
+        {
+            steps
+            {
+                git 'https://github.com/sruthiyelti/DevOpsaws-Project.git'
+            }
+        }
+        
+        stage ('Build')
+        {
+            steps
+            {
+                sh label: '', script: 'mvn package'
+            }
+        }
+        
+    
+
+        stage('upload to nexus')
+         {
+             steps
+             {
+                 nexusArtifactUploader artifacts: [[artifactId: 'DevOpsRocks', classifier: '', file: 'target/DevOpsRocks-1.0.war', type: 'war']], credentialsId: 'nexus3', groupId: 'project.in', nexusUrl: '54.184.165.153:8081/', nexusVersion: 'nexus3', protocol: 'http', repository: 'simple-app', version: '1.0'
+             }
+         }
+    }
+}
+        
