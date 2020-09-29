@@ -22,7 +22,7 @@
   <repository>
      <id>releases</id>
      <name>Releases</name>
-    <url>http://52.10.36.253:8081/repository/simpleapp-release/</url>
+    <url>/http://52.10.36.253:8081/repository/simpleapp-release/</url>
   </repository>
   <snapshotRepository>
      <id>snapshots</id>
