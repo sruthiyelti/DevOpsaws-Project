@@ -1,3 +1,4 @@
+
 pipeline
 {
     agent any
@@ -7,7 +8,7 @@ pipeline
         {
             steps
             {
-                git 'https://github.com/sruthiyelti/DevOpsaws-Project.git'
+                 git 'https://github.com/sruthiyelti/DevOpsaws-Project.git'
             }
         }
         
@@ -22,10 +23,13 @@ pipeline
     }
     post
     {
+        failure
+        {
+            emailext attachLog: true, body: "Please go to ${env.BUILD_URL} for more details.", subject: "Job ${env.JOB_NAME} - (${env.BUILD_NUMBER}) has FAILED", to: 'thinklikesruthi@gmail.com'
+        }
         success
         {
-            emailext attachLog: true, body: 'Please take a look', subject: 'Test email', to: 'thinklikesruthi@gmail.com'
+            emailext attachLog: true, body: "Please go to ${env.BUILD_URL} for more details.", subject: "Job ${env.JOB_NAME} - (${env.BUILD_NUMBER}) has SUCCEDED", to: 'thinklikesruthi@gmail.com'
         }
-        
     }
 }
