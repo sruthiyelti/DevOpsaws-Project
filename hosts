@@ -1,2 +1,1 @@
-[node]
-34.212.177.38
+webserver1ansible_host=54.189.2.204 ansible_port=22
