@@ -24,8 +24,7 @@ pipeline
     {
         success
         {
-            emailext attachLog: true, body: '''$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS:
-''', subject: '$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS!', to: 'thinklikesruthi@gmail.com'
+            emailext attachLog: true, body: 'Please take a look', subject: 'Test email', to: 'thinklikesruthi@gmail.com'
         }
         
     }
