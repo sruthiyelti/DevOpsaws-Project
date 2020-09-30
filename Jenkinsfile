@@ -6,7 +6,7 @@ pipeline {
       stage('checkout') {
            steps {
              
-                git branch: 'master', url: git 'https://github.com/sruthiyelti/DevOpsaws-Project.git'
+                git 'https://github.com/sruthiyelti/DevOpsaws-Project.git'
           }
         }
         stage ('Build')
