@@ -1,2 +1,2 @@
-webserver1
-host=54.189.2.204 
+webserver1 ansible_host=54.189.2.204 ansible_port=22
+
