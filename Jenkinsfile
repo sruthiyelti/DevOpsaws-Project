@@ -18,7 +18,7 @@ pipeline {
         }
         stage('Ansible') {
            steps {
-               ansiblePlaybook credentialsId: 'ansible-ssh', disableHostKeyChecking: true, installation: 'myansible', inventory: 'hosts', playbook: 'tomcat.yml'
+               ansiblePlaybook become: true, credentialsId: 'ansible-ssh', installation: 'myansible', inventory: 'hosts', playbook: 'tomcat.yml'
           }
         }
     }
