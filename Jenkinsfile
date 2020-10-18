@@ -18,7 +18,7 @@ pipeline {
        stage("deploycode"){
             steps{
               sshagent(['tomcat']) {
-                    sh "scp -o StrictHostKeyChecking=no webapp/target/ DevOpsRocks.war /home/ubuntu:34.219.26.202:/apache-tomcat-9.0.11/webapp"
+                    sh "scp -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/tomcat/target/DevOpsRocks.war ubuntu@34.219.26.202:/home/ubuntu/apache-tomcat-9.0.11/webapps"
 
 
     }
