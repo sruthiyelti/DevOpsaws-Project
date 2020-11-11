@@ -10,7 +10,7 @@ pipeline {
         }
         stage('code'){
             steps {
-                withSonarQubeEnv(credentialsId: 'mysonar' installationName: 'sonar') {
+                withSonarQubeEnv(credentialsId: 'jenkins-sonar' installationName: 'sonarserver') {
                     sh 'mvn package sonar:sonar'
                 }
    }
