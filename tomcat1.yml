@@ -16,7 +16,7 @@
     get_url: url=https://devops-work.s3-us-west-2.amazonaws.com/TechdatCommunicationss.war dest=/tmp
 
   - name: copying the war file to server
-    shell: cp /tmp/TechdatCommunicationss.war /tmp/apache-tomcat-8.0.27/webapps/
+    copy: /tmp/TechdatCommunicationss.war /tmp/apache-tomcat-8.0.27/webapps/TechdatCommunicationss.war
 
   - name: start apache-tomcat-8.0.27 to start the tomcat
     shell: /tmp/apache-tomcat-8.0.27/bin/startup.sh
